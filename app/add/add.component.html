@@ -1,0 +1,56 @@
+<div class="add">
+	<div class="container-narrow">
+		<div class="panel panel-primary panel-input">
+			<div class="panel-heading">Add New Profile	</div>
+			<div class="panel-body">
+				<form action="" class="form-horizontal" #addProfileForm="ngForm">
+					<div class="col-md-4">
+						<!-- <image-upload 
+							[max] = "1"
+							[buttonCaption] = "'Select Photo'"
+							[dropBoxMessage] = "''"
+							[extensions] = "['jpg','jpeg','gif', 'png']"
+							[isPending]= "disableSendButton($event)"
+							(onFileUploadFinish) = "imageUpload($event)"
+							(onRemove) = "imageRemoved($event)"
+						>
+							
+						</image-upload> -->
+						<img src="{{file_src}}" alt="" height="100" width="200">
+					</div>
+					<div class="col-md-8">
+						<div class="form-group">
+							<label for="fullname" class="col-sm-4 control-label" >FullName</label>
+							<div class="col-sm-8"><input type="text" class="form-control" name="fullname" required maxlength="30" [ngModel]="model.fullname" #fullname = "ngModel">
+								<div *ngIf="fullname.errors && (fullname.dirty || fullname.touched )" class="alert alert-danger">
+									<div [hidden] = "fullname.errors?.required">
+										<span class="glyphicon glyphicon-exclamation-sign"></span> &nbsp; Fullname is required
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="age" class="col-sm-4 control-label" >Age :</label>
+								<div class="col-sm-8"><input type="number" class="form-control" name="age" required [ngModel]="model.age" #age = 'ngModel'>
+								<div *ngIf="age.errors && (age.dirty || age.touched)" class="alert alert-danger">
+									<div [hidden] = "age.errors?.required">
+										<span class="glyphicon glyphicon-exclamation-sign"></span> &nbsp; Fullname is required
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-8">
+								<button class="btn btn-success" type="submit" [disabled]="!addProfileForm.valid">
+									SAVE
+								</button>
+								<a href="" class="btn btn-info" (click) = "goBack()">CANCEL</a>
+								<div class="alert alert-success alert-dismissible" id="msg"></div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
