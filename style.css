@@ -1,0 +1,17 @@
+.home {
+	margin-top: 100px;
+	color: #000;
+}
+
+.container-narrow {
+	margin: 0 auto;
+	max-width: 700px;
+}
+
+.panel-heading {
+	height: 55px;
+}
+
+.panel-input {
+	margin-top: 50px;
+}
