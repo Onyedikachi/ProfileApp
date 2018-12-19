@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width", initial-scale="1">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+	<title>Document</title>
+
+	<script src="node_modules/zone.js/dist/zone.js"></script>
+	<script src="node_modules/reflect-metadata/Reflect.js"></script>
+	<script src="node_modules/systemjs/dist/system.js"></script>
+	<script src="systemjs.config.js"></script>
+	<script>
+		System.import('app').catch(function(err){console.error(err);});
+	</script>
+
+</head>
+<body>
+	<hello>loading hello </hello>
+	<navbar>loading navbar</navbar>
+	<app>loading app</app>
+	<home>loading home</home>
+	<add>loading add</add>
+	<edit>Loading edit</edit>
+</body>
+</html>
